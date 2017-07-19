@@ -6,7 +6,7 @@ url = "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108"
 f = open("data/kma.txt","w")
 response = requests.get(url);
 text = response.text
-loc = re.findall('<location (.+?)</location>',text,re.DOTALL); 
+loc = re.findall('<location (.+?)</location>',text,re.DOTALL);
 #print(len(loc))
 
 #각각의 location에서 city를 출력
